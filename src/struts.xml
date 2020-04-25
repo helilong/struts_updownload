@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 国际化操作配置 -->
+	<include file="struts-prov.xml"></include>
+	
+	
+	
+	<!-- 上传下载   拦截器（重复提交           表单验证） -->
+	<include file="struts-prov2.xml"></include>
+</struts>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 配置struts2的常量区 -->
+	<!-- 该常量代表是否使用  struts2的一个非常强大的功能  叫    动态代理模式 -->
+<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+	<!-- 使用的编码格式为 utf-8 -->
+<constant name="struts.custom.i18n.resources" value="myMessage"></constant>
+	<!-- 代表是否使用开发者模式 以便于调式bug -->
+<constant name="struts.devMode" value="true"></constant>
+	<!-- 代表你实现核心业务 所使用的 文件后缀名   action   do  没有 -->
+<constant name="struts.action.extension" value="action,do,"></constant>
+	<!-- 允许上传文件的最大值为100mb -->
+<constant name="struts.multipart.maxSize" value="10485760"></constant>
+
+<package name="pk2" namespace="/" extends="struts-default">
+
+						<!--国际化  -->
+		<action name="user" class="com.sec.action.LoginAction" method="login">
+			<result name="ok">/index.jsp</result>
+			<result name="login">/login.jsp</result>
+		</action>
+		
+		<action name="change" class="com.sec.action.LanguageAction" method="changeLan">
+			<result name="login">/login.jsp</result>
+		</action>
+
+</package>
+</struts>
